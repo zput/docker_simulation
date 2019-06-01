@@ -18,7 +18,7 @@ char* const container_args[] = {
  
 int container_main(void* arg)
 {
-    printf("Container - inside the container!\n");
+    printf("Container[%5d] - inside the container!\n", getpid());
     /* 直接执行一个shell，以便我们观察这个进程空间里的资源是否被隔离了 */
     execv(container_args[0], container_args); 
     printf("Something's wrong!\n");
