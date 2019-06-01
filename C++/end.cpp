@@ -60,18 +60,18 @@ int container_main(void *arg)
  
     int errCode; 
     if ( (errCode = mount("conf/hosts", "rootfs/etc/hosts", "none", MS_BIND, NULL)) != 0 ){
-        printf("%d", errCode)
-        perror("conf/hosts")
+        printf("%d", errCode);
+        perror("conf/hosts");
     }
     
     if ( (errCode = mount("conf/hostname", "rootfs/etc/hostname", "none", MS_BIND, NULL)) != 0 ){
-        printf("%d", errCode)
-        perror("conf/hostname")
+        printf("%d", errCode);
+        perror("conf/hostname");
     }
     
     if ( (errCode = mount("conf/resolv.conf", "rootfs/etc/resolv.conf", "none", MS_BIND, NULL)) != 0 ){
-        printf("%d", errCode)
-        perror("conf/resolv")
+        printf("%d", errCode);
+        perror("conf/resolv");
     }
 
     /* 模仿docker run命令中的 -v, --volume=[] 参数干的事 */
